@@ -1,0 +1,110 @@
+.profile-screen
+{
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.profile-body
+{
+    width: 75%;
+    height: 30%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-body > h1{
+    font-size: 2rem;
+    
+}
+
+.profile-img
+{
+    width: 75px;
+    height: auto;
+    object-fit: contain;
+}
+.profile-info
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.subscribe-btn,.current-package
+{
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: #e50914;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+.profile-plans
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;    
+    height: 100%;
+}
+.profile-details > h2{
+    background-color: gray;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.profile-plans > h4{
+    margin-top: 0.6rem;
+}
+.plan-details
+{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-signout
+{
+    cursor: pointer;
+    margin-top: 1rem;
+    height: 2rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    background-color: #e50914;
+}
+.current-package
+{
+    width: max-content;
+    font-size: 1rem;
+    background-color: gray;
+}
+
+@media only screen and (max-width: 420px) {
+    
+    .profile-info
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr;
+        padding-top: 0.6rem;
+        padding-left: 0;
+    }
+    
+.profile-body{
+    top: 30%;
+}
+
+}

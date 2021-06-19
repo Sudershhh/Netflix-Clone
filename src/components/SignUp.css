@@ -1,0 +1,66 @@
+.sign_up
+{
+    height: 30rem;
+    width: 25rem;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+}
+.sign_up_form 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}   
+
+.sign_up_form > h1
+{
+    font-size: 3rem;
+}
+
+.sign_up_form > input, .sign_up_form > button
+{
+    width: 80%;
+    font-size:1rem;
+    font-weight: 900;
+    height: 4rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.sign_up_form > input{
+    padding: 1rem;
+}
+.sign_up_form>input::placeholder,.sign_up_form>button
+{
+    font-size: 1rem;
+    color: black;
+    font-weight: 900;
+}
+.sign_up_form>button
+{
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.new-to-netflix
+{
+    color: gray;
+}
+.signup_link:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen  and (max-width:420px)
+{
+    .sign_up
+    {
+        height: 30rem;
+        width: 90%;
+        margin : 0 auto;
+    }
+}
