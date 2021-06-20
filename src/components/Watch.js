@@ -21,7 +21,7 @@ function Watch(props) {
         {
             fetch(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=${API_KEY}&language=en-US`)
             .then(response => response.json())
-            .then(data => setTrailerLink(data.results[0].key)) 
+            .then(data => setTrailerLink(data?.results[0]?.key)) 
             .catch((err) => alert(err.message))
         }
 
@@ -54,13 +54,12 @@ function Watch(props) {
                         <h2>First air date : {air_data}</h2>
                     </div>
         
-                    <iframe 
+                   {trailerLink ?(<iframe 
                             src={`https://www.youtube.com/embed/${trailerLink}`}
-
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowFullScreen>
-                    </iframe>
+                    </iframe>) : (<h1>Sorry, your trailer could not be fetched.</h1>) } 
                 </div>
                 <div className="close-btn" onClick={() => {dispatch(modalActions.closeModal())}}>
                     <i class="fas fa-times"></i>
